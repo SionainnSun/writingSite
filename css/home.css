@@ -1,0 +1,96 @@
+    .menu {
+        width: 100%;
+        font-family: lucida sans unicode, sans-serif;
+    }
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #333;
+    }
+    .menu ul li {
+        float: left;
+    }
+    .menu li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .menu li a:hover {
+        background: black;
+    }
+    .dropdownmenu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        color: black;
+    }
+    .dropdown:hover .dropdownmenu {
+        display: block;
+    }
+    .menu ul li .dropdownmenu a {
+        color: black;
+        font-size: 14px;
+        text-align: left;
+    }
+    .menu ul li .dropdownmenu a:hover {
+        background: gray;
+    }
+    .active {
+        background: red;
+    }
+    .logo {
+        height: 150px;
+        width: 200px;
+        background-repeat: no-repeat;
+        float: left;
+        overflow: hidden;
+    }
+    .name {
+        vertical-align: bottom;
+        font-size: 5vw;
+        float: bottom;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    #header {
+        height: 150px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+    #topRightBtns {
+        position: absolute;
+        right:0;
+        top: 0;
+    }
+    #topRightBtns ul {
+        background-color: white;
+    }
+    #topRightBtns li a {
+        display: block;
+        color: gray;
+        text-align: center;
+        padding: 7px 8px;
+        text-decoration: none;
+    }
+    #topRightBtns li a:hover {
+        background: rgba(255, 10, 80, 0.2);
+    }
+    footer {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        background: #333;
+        color: white;
+        font-family: lucida sans unicode, sans-serif;
+        font-size: .85em;
+    }
