@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Untitled</title>
+
+  <style>
+
+    .menu {
+        width: 100%;
+        font-family: lucida sans unicode, sans-serif;
+    }
+
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #333;
+    }
+
+    .menu ul li {
+        float: left;
+    }
+
+    .menu li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .menu li a:hover {
+        background: black;
+    }
+
+    .dropdownmenu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        color: black;
+    }
+
+    .dropdown:hover .dropdownmenu {
+        display: block;
+    }
+
+    .menu ul li .dropdownmenu a {
+        color: black;
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .menu ul li .dropdownmenu a:hover {
+        background: gray;
+    }
+
+    .active {
+        background: red;
+    }
+
+    .logo {
+        height: 150px;
+        width: 200px;
+        background-repeat: no-repeat;
+        float: left;
+        overflow: hidden;
+    }
+
+    .name {
+        vertical-align: bottom;
+        font-size: 5vw;
+        float: bottom;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    #header {
+        height: 150px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #topRightBtns {
+        position: absolute;
+        right:0;
+        top: 0;
+    }
+
+    #topRightBtns ul {
+        background-color: white;
+    }
+
+    #topRightBtns li a {
+        display: block;
+        color: gray;
+        text-align: center;
+        padding: 7px 8px;
+        text-decoration: none;
+    }
+
+    #topRightBtns li a:hover {
+        background: rgba(255, 10, 80, 0.2);
+    }
+
+    footer {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        background: #333;
+        color: white;
+        font-family: lucida sans unicode, sans-serif;
+        font-size: .85em;
+    }
+
+
+    .news {
+        font-family: lucida sans unicode, sans-serif;
+    }
+
+  </style>
+
+  <script>
+        var toggleActive = function(id) {
+            var eles = document.getElementsByClassName('active');
+            for(var i=0; i < eles.length; i++) {
+                var currentId = eles[i].getAttribute('id');
+                if(currentId !== id) {
+                    eles[i].classList.toggle('active');
+                }
+            }
+            if(eles.length === 0) {
+                document.getElementById(id).classList.toggle('active');
+            }
+        }
+
+        var toggleDisplay = function(id) {
+            document.getElementById(id).style.display = block;
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="logo"><a href="#"><img src="https://s12.postimg.org/yp7loxt4d/Writing_from_the_heart_logo.png" alt="Image Not Found" /></a></div>
+            <div class="name">Writing From The Heart, Inc.</div>
+            <div id="topRightBtns">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#" id="signIn">Sign In</a></li>
+                        <li><a href="#" id="signUp">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#" class="active" id="home" onClick = "toggleActive('home');">Home</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdownbtn" id="aboutMe" onClick = "toggleActive('aboutMe');">About Me</a>
+                <div class="dropdownmenu" id ="aboutMeMenu">
+                    <a href="#" id="childhood">Childhood</a>
+                    <a href="#" id="personality">Personality</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdownbtn" id="writing" onClick = "toggleActive('writing');">My Writing</a>
+                <div class="dropdownmenu" id ="writingMenu">
+                    <a href="#" class="dropdownmenulink" id="poems">Poems</a>
+                    <a href="#" id="essays">Essays</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdownbtn" id="trivia" onClick="toggleActive('trivia');">Trivia</a>
+                <div class="dropdownmenu">
+                    <a href="#" id="harrypottertrivia"><em>Harry Potter</em> Trivia</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="news">
+        <h2>Recent news</h2>
+    </div>
+
+    <footer>
+        Hello there I am a footer
+    </footer>
+</body>
+
+</html>
