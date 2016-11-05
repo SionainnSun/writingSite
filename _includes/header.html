@@ -1,3 +1,39 @@
+<!DOCTYPE html>
+<html>
+        
+        <head>
+                <link type="text/css" rel="stylesheet" href="css/home.css"/>
+                <script>
+                        (function(i,s,o,g,r,a,m){
+                                i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                                ga('create', 'UA-86920982-1', 'auto');
+                        ga('send', 'pageview');
+                </script>
+  
+  <script>
+        var toggleActive = function(id) {
+            var eles = document.getElementsByClassName('active');
+            for(var i=0; i < eles.length; i++) {
+                var currentId = eles[i].getAttribute('id');
+                if(currentId !== id) {
+                    eles[i].classList.toggle('active');
+                }
+            }
+            if(eles.length === 0) {
+                document.getElementById(id).classList.toggle('active');
+            }
+        }
+        var toggleDisplay = function(id) {
+            document.getElementById(id).style.display = block;
+        }
+    </script>
+
+        </head>
+
+        <body>
 <header>
         <div id="header">
             <div class="logo"><a href="#"><img src="https://s12.postimg.org/yp7loxt4d/Writing_from_the_heart_logo.png" alt="Image Not Found" /></a></div>
@@ -11,7 +47,6 @@
                 </div>
             </div>
         </div>
-    </header>
 
     <div class="menu">
         <ul>
@@ -43,3 +78,5 @@
             </li>
         </ul>
     </div>
+        
+</header>
